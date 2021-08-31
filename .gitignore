@@ -1,0 +1,16 @@
+.idea/
+.DS_Store
+/lab
+/tmp
+/build
+
+
+.env
+
+# Compiled test files
+*.test
+
+# Coverage output files
+coverage.txt
+coverage.html
+

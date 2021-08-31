@@ -6,6 +6,12 @@ You can use this package to print shaped persian/arabic texts on images and pdf 
 __Note__: Inspired by [goarabic](https://github.com/01walid/goarabic) but more simple and clear for persian/arabic
 languages.
 
+## Installation
+
+```text
+go get github.com/mehran-prs/gopersian
+```
+
 ## Usage
 
 ```go

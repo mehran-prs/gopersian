@@ -1,5 +1,11 @@
 package gopersian
 
+import (
+	"strings"
+
+	"golang.org/x/text/unicode/bidi"
+)
+
 func adjustLetterShape(previousChar, currentChar, nextChar rune) rune {
 	shape := currentChar
 	previousIn := false // in the Arabic Alphabet or not
@@ -84,10 +90,40 @@ func Shape(val string) string {
 	return string(newText)
 }
 
-func Reverse(s string) string {
-	r := []rune(s)
-	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
-		r[i], r[j] = r[j], r[i]
+// Reorder reorder runes by checking directions.
+func Reorder(val string) (string, error) {
+	p := new(bidi.Paragraph)
+	_, err := p.SetString(val)
+	if err != nil {
+		return "", err
 	}
-	return string(r)
+
+	ordering, err := p.Order()
+	if err != nil {
+		return "", err
+	}
+
+	builder := strings.Builder{}
+	olen := ordering.NumRuns()
+
+	for i := 0; i < olen; i++ {
+		index := i
+		if ordering.Direction() == bidi.RightToLeft {
+			index = olen - i - 1
+		}
+		r := ordering.Run(index)
+
+		str := r.String()
+		if r.Direction() == bidi.RightToLeft {
+			str = bidi.ReverseString(r.String())
+		}
+		builder.WriteString(str)
+	}
+
+	return builder.String(), nil
+}
+
+// RTL shapes the string and reorder it.
+func RTL(val string) (string, error) {
+	return Reorder(Shape(val))
 }

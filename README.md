@@ -25,7 +25,8 @@ import (
 func main() {
 	fmt.Println("سلام")
 	fmt.Println(gopersian.Shape("سلام"))
-	fmt.Println(gopersian.Reverse(gopersian.Shape("سلام")))
+	fmt.Println(gopersian.Reorder(gopersian.Shape("سلام")))
+	fmt.Println(gopersian.RTL("سلام"))
 }
 ```
 

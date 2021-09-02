@@ -123,7 +123,7 @@ func Reorder(val string) (string, error) {
 	return builder.String(), nil
 }
 
-// RTL shapes the string and reorder it.
-func RTL(val string) (string, error) {
+// Bidi shapes and reorder the string.
+func Bidi(val string) (string, error) {
 	return Reorder(Shape(val))
 }

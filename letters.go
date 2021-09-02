@@ -1,6 +1,7 @@
 package gopersian
 
-// Letter holds the Persian/Arabic character with its different representation forms (glyphs).
+// Letter holds the Persian/Arabic character with its
+// different representation forms (glyphs).
 type Letter struct {
 	Unicode, Isolated, Initial, Medial, Final rune
 }

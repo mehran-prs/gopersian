@@ -26,22 +26,17 @@ func TestShape(t *testing.T) {
 }
 
 func TestReorder(t *testing.T) {
-	cases := []struct {
+	tests := []struct {
 		Tag      string
 		in, want string
 	}{
 		{"t1", "Hello, world", "Hello, world"},
-		{"t2", "Hello, 世界", "Hello, 世界"},
-		{"t5", "نص عربي", "يبرع صن"},
-		// TODO: Fix other cases
-		//{"t6", " خوبی؟ drink water 1234 چ خبر؟", "؟ربخ چ 1234 drink water ؟یبوخ "},
-		//{"t7", "hi خوبی؟ drink water 1234 چ خبر؟", "؟ربخ چ 1234 drink water ؟یبوخ hi"},
-		//{"t8", "نَصٌ عَربِيٌّ!", "!ٌّيِبرَع ٌصَن"},
-		//{"t9", "نَصٌ example, عَربِيٌّ!", "!يٌّبِرعَ ,example صٌَن"},
+		{"t1", "خوبی", "یبوخ"},
+		{"t6", "خوبی؟ drink water 1234 چ خبر؟", "؟ربخ چ drink water 1234 ؟یبوخ"},
 		{"t10", "", ""},
 	}
 
-	for _, c := range cases {
+	for _, c := range tests {
 		t.Run(c.Tag, func(t *testing.T) {
 			got, err := Reorder(c.in)
 			if err != nil {
@@ -52,5 +47,29 @@ func TestReorder(t *testing.T) {
 				t.Errorf("invalid reverse result, input; %s,  wanted:%s, got: %s", c.in, c.want, got)
 			}
 		})
+	}
+}
+
+func TestBidi(t *testing.T) {
+	tests := []struct {
+		Tag  string
+		in   string
+		want string
+	}{
+		{"t1", "سلام مهران", "\ufee5\u0627\ufeae\ufeec\ufee3 \ufee1\ufe8e\ufee0\ufeb3"},
+		{"t2", "", ""},
+	}
+
+	for _, c := range tests {
+		t.Run(c.Tag, func(t *testing.T) {
+			got, err := Bidi(c.in)
+			if err != nil {
+				t.Error("got error", err)
+			}
+			if got != c.want {
+				t.Errorf("invalid result, wanted: %s, got: %s", c.want, got)
+			}
+		})
+
 	}
 }

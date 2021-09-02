@@ -4,7 +4,7 @@ A Go Lang package for dealing with Persian [text shaping](https://www.unicode.or
 You can use this package to print shaped persian/arabic texts on images and pdf files.
 
 __Note__: Inspired by [goarabic](https://github.com/01walid/goarabic) but more simple and clear for persian/arabic
-languages.
+languages and supports bidi text reordering 😍
 
 ## Installation
 
@@ -26,7 +26,7 @@ func main() {
 	fmt.Println("سلام")
 	fmt.Println(gopersian.Shape("سلام"))
 	fmt.Println(gopersian.Reorder(gopersian.Shape("سلام")))
-	fmt.Println(gopersian.Bidi("سلام")) // shape and reorder.
+	fmt.Println(gopersian.Bidi("سلام خوبی؟")) // shape and reorder.
 }
 ```
 

@@ -4,7 +4,7 @@ A Go Lang package for dealing with Persian [text shaping](https://www.unicode.or
 You can use this package to print shaped persian/arabic texts on images and pdf files.
 
 __Note__: Inspired by [goarabic](https://github.com/01walid/goarabic) but more simple and clear for persian/arabic
-languages and supports bidi text reordering 😍
+languages and supports bidi text reordering 
 
 ## Installation
 

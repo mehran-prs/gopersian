@@ -1,27 +1,30 @@
 package gopersian
 
 import (
-	"fmt"
 	"testing"
 )
 
 func TestShape(t *testing.T) {
 	cases := []struct {
+		tag  string
 		in   string
 		want string
 	}{
-		{"سلام مهران", "\ufeb3\ufee0\ufe8e\ufee1 \ufee3\ufeec\ufeae\u0627\ufee5"},
-		{"", ""},
+		{"t1", "", ""},
+		{"t2", "سلام مهران", "\ufeb3\ufee0\ufe8e\ufee1 \ufee3\ufeec\ufeae\u0627\ufee5"},
+		{"t3", "سلام مهران abc", "\ufeb3\ufee0\ufe8e\ufee1 \ufee3\ufeec\ufeae\u0627\ufee5 abc"},
 	}
 
 	for _, c := range cases {
-		got := Shape(c.in)
-		for _, r := range got {
-			fmt.Printf("%+q", r)
-		}
-		if got != c.want {
-			t.Errorf("invalid shape result, wanted: %s, got: %s", c.want, got)
-		}
+		t.Run(c.tag, func(t *testing.T) {
+			got := Shape(c.in)
+			//for _, r := range got {
+			//	fmt.Printf("%+q", r)
+			//}
+			if got != c.want {
+				t.Errorf("invalid shape result, wanted: %s, got: %s", c.want, got)
+			}
+		})
 	}
 }
 

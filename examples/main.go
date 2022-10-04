@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println("سلام")
+	fmt.Println("سلام مهران")
 	fmt.Println(gopersian.Shape("سلام"))
 	fmt.Println(gopersian.Reorder(gopersian.Shape("سلام")))
 	fmt.Println(gopersian.Reorder(gopersian.Shape("سلام خوبی? 1234 چ خبر؟")))

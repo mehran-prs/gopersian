@@ -8,140 +8,141 @@ type Letter struct {
 
 // Persian/arabic alphabet.
 var (
-	ALEF_HAMZA_ABOVE = Letter{ // أ
+	AlefHamzaAbove = Letter{ // أ
 		Unicode:  '\u0623',
 		Isolated: '\ufe83',
 		Initial:  '\u0623',
 		Medial:   '\ufe84',
 		Final:    '\ufe84'}
 
-	ALEF = Letter{ // ا
+	Alef = Letter{ // ا
 		Unicode:  '\u0627',
 		Isolated: '\ufe8d',
 		Initial:  '\u0627',
 		Medial:   '\ufe8e',
 		Final:    '\ufe8e'}
 
-	ALEF_MADDA_ABOVE = Letter{ // آ
+	AlefMaddaAbove = Letter{ // آ
 		Unicode:  '\u0622',
 		Isolated: '\ufe81',
 		Initial:  '\u0622',
 		Medial:   '\ufe82',
 		Final:    '\ufe82'}
 
-	HAMZA = Letter{ // ء
+	Hamza = Letter{ // ء
 		Unicode:  '\u0621',
 		Isolated: '\ufe80',
 		Initial:  '\u0621',
 		Medial:   '\u0621',
 		Final:    '\u0621'}
 
-	WAW_HAMZA_ABOVE = Letter{ // ؤ
+	WasHamzaAbove = Letter{ // ؤ
 		Unicode:  '\u0624',
 		Isolated: '\ufe85',
 		Initial:  '\u0624',
 		Medial:   '\ufe86',
 		Final:    '\ufe86'}
 
-	ALEF_HAMZA_BELOW = Letter{ // أ
+	AlefHamzaBelow = Letter{ // أ
 		Unicode:  '\u0625',
 		Isolated: '\ufe87',
 		Initial:  '\u0625',
 		Medial:   '\ufe88',
 		Final:    '\ufe88'}
 
-	YEH_HAMZA_ABOVE = Letter{ // ئ
+	YehHamzaAbove = Letter{ // ئ
 		Unicode:  '\u0626',
 		Isolated: '\ufe89',
 		Initial:  '\ufe8b',
 		Medial:   '\ufe8c',
 		Final:    '\ufe8a'}
 
-	BEH = Letter{ // ب
+	Beh = Letter{ // ب
 		Unicode:  '\u0628',
 		Isolated: '\ufe8f',
 		Initial:  '\ufe91',
 		Medial:   '\ufe92',
 		Final:    '\ufe90'}
 
-	PEH = Letter{ // پ
+	Peh = Letter{ // پ
 		Unicode:  '\u067e',
 		Isolated: '\ufb56',
 		Initial:  '\ufb58',
 		Medial:   '\ufb59',
 		Final:    '\ufb57'}
 
-	TEH = Letter{ // ت
+	// nolint:misspell
+	Teh = Letter{ // ت
 		Unicode:  '\u062A',
 		Isolated: '\ufe95',
 		Initial:  '\ufe97',
 		Medial:   '\ufe98',
 		Final:    '\ufe96'}
 
-	TEH_MARBUTA = Letter{ // ة
+	TehMarbute = Letter{ // ة
 		Unicode:  '\u0629',
 		Isolated: '\ufe93',
 		Initial:  '\u0629',
 		Medial:   '\u0629',
 		Final:    '\ufe94'}
 
-	THEH = Letter{ // ث
+	Theh = Letter{ // ث
 		Unicode:  '\u062b',
 		Isolated: '\ufe99',
 		Initial:  '\ufe9b',
 		Medial:   '\ufe9c',
 		Final:    '\ufe9a'}
 
-	JEEM = Letter{ // ج
+	Jeem = Letter{ // ج
 		Unicode:  '\u062c',
 		Isolated: '\ufe9d',
 		Initial:  '\ufe9f',
 		Medial:   '\ufea0',
 		Final:    '\ufe9e'}
 
-	TCHEH = Letter{ // چ
+	Tcheh = Letter{ // چ
 		Unicode:  '\u0686',
 		Isolated: '\ufb7a',
 		Initial:  '\ufb7c',
 		Medial:   '\ufb7d',
 		Final:    '\ufb7b'}
 
-	HAH = Letter{ // ح
+	Hah = Letter{ // ح
 		Unicode:  '\u062d',
 		Isolated: '\ufea1',
 		Initial:  '\ufea3',
 		Medial:   '\ufea4',
 		Final:    '\ufea2'}
 
-	KHAH = Letter{ // خ
+	Khah = Letter{ // خ
 		Unicode:  '\u062e',
 		Isolated: '\ufea5',
 		Initial:  '\ufea7',
 		Medial:   '\ufea8',
 		Final:    '\ufea6'}
 
-	DAL = Letter{ // د
+	Dal = Letter{ // د
 		Unicode:  '\u062f',
 		Isolated: '\ufea9',
 		Initial:  '\u062f',
 		Medial:   '\ufeaa',
 		Final:    '\ufeaa'}
 
-	THAL = Letter{ // ذ
+	Thal = Letter{ // ذ
 		Unicode:  '\u0630',
 		Isolated: '\ufeab',
 		Initial:  '\u0630',
 		Medial:   '\ufeac',
 		Final:    '\ufeac'}
 
-	REH = Letter{ // ر
+	Reh = Letter{ // ر
 		Unicode:  '\u0631',
 		Isolated: '\ufead',
 		Initial:  '\u0631',
 		Medial:   '\ufeae',
 		Final:    '\ufeae'}
 
-	JEH = Letter{ // ژ
+	Jeh = Letter{ // ژ
 		Unicode:  '\u0698',
 		Isolated: '\ufb8a',
 		Initial:  '\u0698',
@@ -149,91 +150,91 @@ var (
 		Final:    '\ufb8b',
 	}
 
-	ZAIN = Letter{ // ز
+	Zain = Letter{ // ز
 		Unicode:  '\u0632',
 		Isolated: '\ufeaf',
 		Initial:  '\u0632',
 		Medial:   '\ufeb0',
 		Final:    '\ufeb0'}
 
-	SEEN = Letter{ // س
+	Seen = Letter{ // س
 		Unicode:  '\u0633',
 		Isolated: '\ufeb1',
 		Initial:  '\ufeb3',
 		Medial:   '\ufeb4',
 		Final:    '\ufeb2'}
 
-	SHEEN = Letter{ // ش
+	Sheen = Letter{ // ش
 		Unicode:  '\u0634',
 		Isolated: '\ufeb5',
 		Initial:  '\ufeb7',
 		Medial:   '\ufeb8',
 		Final:    '\ufeb6'}
 
-	SAD = Letter{ // ص
+	Sad = Letter{ // ص
 		Unicode:  '\u0635',
 		Isolated: '\ufeb9',
 		Initial:  '\ufebb',
 		Medial:   '\ufebc',
 		Final:    '\ufeba'}
 
-	DAD = Letter{ // ض
+	Dad = Letter{ // ض
 		Unicode:  '\u0636',
 		Isolated: '\ufebd',
 		Initial:  '\ufebf',
 		Medial:   '\ufec0',
 		Final:    '\ufebe'}
 
-	TAH = Letter{ // ط
+	Tah = Letter{ // ط
 		Unicode:  '\u0637',
 		Isolated: '\ufec1',
 		Initial:  '\ufec3',
 		Medial:   '\ufec4',
 		Final:    '\ufec2'}
 
-	ZAH = Letter{ // ظ
+	Zah = Letter{ // ظ
 		Unicode:  '\u0638',
 		Isolated: '\ufec5',
 		Initial:  '\ufec7',
 		Medial:   '\ufec8',
 		Final:    '\ufec6'}
 
-	AIN = Letter{ // ع
+	Ain = Letter{ // ع
 		Unicode:  '\u0639',
 		Isolated: '\ufec9',
 		Initial:  '\ufecb',
 		Medial:   '\ufecc',
 		Final:    '\ufeca'}
 
-	GHAIN = Letter{ // غ
+	Ghain = Letter{ // غ
 		Unicode:  '\u063a',
 		Isolated: '\ufecd',
 		Initial:  '\ufecf',
 		Medial:   '\ufed0',
 		Final:    '\ufece'}
 
-	FEH = Letter{ // ف
+	Feh = Letter{ // ف
 		Unicode:  '\u0641',
 		Isolated: '\ufed1',
 		Initial:  '\ufed3',
 		Medial:   '\ufed4',
 		Final:    '\ufed2'}
 
-	QAF = Letter{ // ق
+	Qaf = Letter{ // ق
 		Unicode:  '\u0642',
 		Isolated: '\ufed5',
 		Initial:  '\ufed7',
 		Medial:   '\ufed8',
 		Final:    '\ufed6'}
 
-	KAF = Letter{ // ك
+	Kaf = Letter{ // ك
 		Unicode:  '\u0643',
 		Isolated: '\ufed9',
 		Initial:  '\ufedb',
 		Medial:   '\ufedc',
 		Final:    '\ufeda'}
 
-	KEHEH = Letter{ // ک
+	Keheh = Letter{ // ک
 		Unicode:  '\u06a9',
 		Isolated: '\ufb8e',
 		Initial:  '\ufb90',
@@ -241,84 +242,84 @@ var (
 		Final:    '\ufb8f',
 	}
 
-	GAF = Letter{ // گ
+	Gaf = Letter{ // گ
 		Unicode:  '\u06af',
 		Isolated: '\ufb92',
 		Initial:  '\ufb94',
 		Medial:   '\ufb95',
 		Final:    '\ufb93'}
 
-	LAM = Letter{ // ل
+	Lam = Letter{ // ل
 		Unicode:  '\u0644',
 		Isolated: '\ufedd',
 		Initial:  '\ufedf',
 		Medial:   '\ufee0',
 		Final:    '\ufede'}
 
-	MEEM = Letter{ // م
+	Meem = Letter{ // م
 		Unicode:  '\u0645',
 		Isolated: '\ufee1',
 		Initial:  '\ufee3',
 		Medial:   '\ufee4',
 		Final:    '\ufee2'}
 
-	NOON = Letter{ // ن
+	Noon = Letter{ // ن
 		Unicode:  '\u0646',
 		Isolated: '\ufee5',
 		Initial:  '\ufee7',
 		Medial:   '\ufee8',
 		Final:    '\ufee6'}
 
-	HEH = Letter{ // ه
+	Heh = Letter{ // ه
 		Unicode:  '\u0647',
 		Isolated: '\ufee9',
 		Initial:  '\ufeeb',
 		Medial:   '\ufeec',
 		Final:    '\ufeea'}
 
-	WAW = Letter{ // و
+	Waw = Letter{ // و
 		Unicode:  '\u0648',
 		Isolated: '\ufeed',
 		Initial:  '\u0648',
 		Medial:   '\ufeee',
 		Final:    '\ufeee'}
 
-	YEH = Letter{ // ی
+	Yeh = Letter{ // ی
 		Unicode:  '\u06cc',
 		Isolated: '\ufbfc',
 		Initial:  '\ufbfe',
 		Medial:   '\ufbff',
 		Final:    '\ufbfd'}
 
-	ARABICYEH = Letter{ // ي
+	Arabicyeh = Letter{ // ي
 		Unicode:  '\u064a',
 		Isolated: '\ufef1',
 		Initial:  '\ufef3',
 		Medial:   '\ufef4',
 		Final:    '\ufef2'}
 
-	ALEF_MAKSURA = Letter{ // ى
+	AlefMaksura = Letter{ // ى
 		Unicode:  '\u0649',
 		Isolated: '\ufeef',
 		Initial:  '\u0649',
 		Medial:   '\ufef0',
 		Final:    '\ufef0'}
 
-	TATWEEL = Letter{ // ـ
+	Tatweel = Letter{ // ـ
 		Unicode:  '\u0640',
 		Isolated: '\u0640',
 		Initial:  '\u0640',
 		Medial:   '\u0640',
 		Final:    '\u0640'}
 
-	LAM_ALEF = Letter{ // لا
+	LamAlef = Letter{ // لا
 		Unicode:  '\ufefb',
 		Isolated: '\ufefb',
 		Initial:  '\ufefb',
 		Medial:   '\ufefc',
 		Final:    '\ufefc'}
 
-	LAM_ALEF_HAMZA_ABOVE = Letter{ // ﻷ
+	LamAlefHamzaAbove = Letter{ // ﻷ
 		Unicode:  '\ufef7',
 		Isolated: '\ufef7',
 		Initial:  '\ufef7',
@@ -327,69 +328,69 @@ var (
 )
 
 var alphabet = []Letter{
-	ALEF_HAMZA_ABOVE,
-	ALEF,
-	ALEF_MADDA_ABOVE,
-	HAMZA,
-	WAW_HAMZA_ABOVE,
-	ALEF_HAMZA_BELOW,
-	YEH_HAMZA_ABOVE,
-	BEH,
-	PEH,
-	TEH,
-	TEH_MARBUTA,
-	THEH,
-	JEEM,
-	TCHEH,
-	HAH,
-	KHAH,
-	DAL,
-	THAL,
-	REH,
-	JEH,
-	ZAIN,
-	SEEN,
-	SHEEN,
-	SAD,
-	DAD,
-	TAH,
-	ZAH,
-	AIN,
-	GHAIN,
-	FEH,
-	QAF,
-	KAF,
-	KEHEH,
-	GAF,
-	LAM,
-	MEEM,
-	NOON,
-	HEH,
-	WAW,
-	YEH,
-	ARABICYEH,
-	ALEF_MAKSURA,
-	TATWEEL,
-	LAM_ALEF,
-	LAM_ALEF_HAMZA_ABOVE,
+	AlefHamzaAbove,
+	Alef,
+	AlefMaddaAbove,
+	Hamza,
+	WasHamzaAbove,
+	AlefHamzaBelow,
+	YehHamzaAbove,
+	Beh,
+	Peh,
+	Teh, //nolint:misspell
+	TehMarbute,
+	Theh,
+	Jeem,
+	Tcheh,
+	Hah,
+	Khah,
+	Dal,
+	Thal,
+	Reh,
+	Jeh,
+	Zain,
+	Seen,
+	Sheen,
+	Sad,
+	Dad,
+	Tah,
+	Zah,
+	Ain,
+	Ghain,
+	Feh,
+	Qaf,
+	Kaf,
+	Keheh,
+	Gaf,
+	Lam,
+	Meem,
+	Noon,
+	Heh,
+	Waw,
+	Yeh,
+	Arabicyeh,
+	AlefMaksura,
+	Tatweel,
+	LamAlef,
+	LamAlefHamzaAbove,
 }
 
 // use map for faster lookups.
 var isolatedAfter = map[Letter]bool{
-	ALEF_HAMZA_ABOVE: true,
-	ALEF_MADDA_ABOVE: true,
-	ALEF:             true,
-	HAMZA:            true,
-	WAW_HAMZA_ABOVE:  true,
-	ALEF_HAMZA_BELOW: true,
-	TEH_MARBUTA:      true,
-	DAL:              true,
-	THAL:             true,
-	REH:              true,
-	JEH:              true,
-	ZAIN:             true,
-	WAW:              true,
-	ALEF_MAKSURA:     true,
+	AlefHamzaAbove: true,
+	AlefMaddaAbove: true,
+	Alef:           true,
+	Hamza:          true,
+	WasHamzaAbove:  true,
+	AlefHamzaBelow: true,
+	TehMarbute:     true,
+	Dal:            true,
+	Thal:           true,
+	Reh:            true,
+	Jeh:            true,
+	Zain:           true,
+	Waw:            true,
+	AlefMaksura:    true,
 }
 
 func (c *Letter) equals(char rune) bool {

@@ -27,7 +27,7 @@ func adjustLetterShape(previousChar, currentChar, nextChar rune) rune {
 		}
 
 		if previousIn && nextIn { // between two Persian Alphabet, return the medium shape
-			for s, _ := range isolatedAfter {
+			for s := range isolatedAfter {
 				if s.equals(previousChar) {
 					return letterFromRune(currentChar).Initial
 				}
@@ -41,7 +41,7 @@ func adjustLetterShape(previousChar, currentChar, nextChar rune) rune {
 		}
 
 		if previousIn { // final (because the next is not in the Arabic Alphabet)
-			for s, _ := range isolatedAfter {
+			for s := range isolatedAfter {
 				if s.equals(previousChar) {
 					return letterFromRune(currentChar).Isolated
 				}
